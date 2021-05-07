@@ -4,6 +4,7 @@ import { Fragment, useEffect, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, SelectorIcon, PlusIcon } from "@heroicons/react/solid";
 import { DonateAnnounce } from "~/components/Donation";
+import { PageLoading } from "~/components/Loading";
 
 interface TokenApi {
   name: string;
@@ -71,7 +72,7 @@ const IndexPage = () => {
   }, [state.contractAddrA, state.contractAddrB]);
 
   if (state.error) return <div>failed to load</div>;
-  if (!state.tokenList) return <div>loading...</div>;
+  if (!state.tokenList) return <PageLoading />;
 
   const tokenList = state.tokenList as TokenApiList;
 
