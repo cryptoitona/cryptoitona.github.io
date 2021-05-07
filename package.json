@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "type-check": "tsc",
-    "codegen": "graphql-codegen --config apollo/codegen.yml"
+    "export": "next export"
   },
   "dependencies": {
     "@headlessui/react": "^1.1.1",
