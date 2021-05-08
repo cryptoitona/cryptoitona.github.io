@@ -78,7 +78,7 @@ const IndexPage = () => {
 
   return (
     <Layout title="Remove Liquidity Maker | cryptoitona homepage">
-      <article className="h-screen bg-gray-100 py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
+      <article className="h-screen bg-gray-100 py-16 px-4 overflow-auto sm:px-6 lg:px-8 lg:py-24">
         <div className="relative max-w-xl mx-auto">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -118,7 +118,7 @@ const IndexPage = () => {
                       name="contract_address_a"
                       id="contract_address_a"
                       autoComplete="contract_address"
-                      className="pl-4 py-3 w-full border-l focus:outline-none rounded-r-md sm:text-sm"
+                      className="pl-4 py-3 w-full border-l focus:outline-none rounded-r-md text-xs sm:text-sm"
                       placeholder="Input contract address or BNB here"
                       value={state.contractAddrA}
                       onChange={(e) => {
@@ -170,7 +170,7 @@ const IndexPage = () => {
                       name="contract_address_b"
                       id="contract_address_b"
                       autoComplete="contract_address"
-                      className="pl-4 py-3 w-full border-l focus:outline-none rounded-r-md sm:text-sm"
+                      className="pl-4 py-3 w-full border-l focus:outline-none rounded-r-md text-xs sm:text-sm"
                       placeholder="Input contract address or BNB here"
                       value={state.contractAddrB}
                       onChange={(e) => {
@@ -237,7 +237,7 @@ const SelectBox = ({
       {({ open }) => (
         <>
           <div className="relative">
-            <Listbox.Button className="bg-blue-500 font-semibold text-white relative w-32 rounded-l-md pl-4 pr-8 py-3 text-left cursor-default focus:outline-none sm:text-sm">
+            <Listbox.Button className="bg-blue-500 font-semibold text-white relative w-16 sm:w-32 rounded-l-md pl-4 pr-8 py-3 text-left cursor-default focus:outline-none text-xs sm:text-sm">
               <span className="block truncate">
                 {((): string => {
                   if (selectedAddr === "BNB") return "BNB";
@@ -263,7 +263,7 @@ const SelectBox = ({
             >
               <Listbox.Options
                 static
-                className="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm"
+                className="absolute z-10 mt-1 w-42 sm:w-full bg-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm"
               >
                 {[...new Set(["BNB", ...Object.keys(tokenList ?? {}), ""])].map(
                   (address) => (
